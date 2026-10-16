@@ -3,26 +3,10 @@ import { mkdirSync } from "node:fs";
 import path from "node:path";
 import { ApiError } from "./security";
 
-export interface DocumentStore<T> {
-  read(key: string): Promise<T | undefined>;
-  transact<R>(
-    key: string,
-    seed: (() => T) | undefined,
-    fn: (state: T) => R,
-  ): Promise<R>;
-  ready(): Promise<boolean>;
-  close(): Promise<void>;
-}
-export const MAX_DOCUMENT_BYTES = 2 * 1024 * 1024;
-export function encodeDocument(value: unknown): string {
-  const text = JSON.stringify(value);
-  if (Buffer.byteLength(text) > MAX_DOCUMENT_BYTES)
-    throw new ApiError(
-      "Demo workspace storage limit reached. Export evidence and reset unused examples.",
-      413,
-    );
-  return text;
-}
+import { encodeDocument, type DocumentStore } from "./storage-contract";
+export { encodeDocument, MAX_DOCUMENT_BYTES } from "./storage-contract";
+export type { DocumentStore } from "./storage-contract";
+
 export class SqliteStore<T> implements DocumentStore<T> {
   private db: DatabaseSync;
   private tail: Promise<unknown> = Promise.resolve();

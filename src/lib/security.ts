@@ -19,7 +19,7 @@ export interface Config {
   secret: string;
   accessCode: string;
   writesEnabled: boolean;
-  storage: "sqlite" | "mysql";
+  storage: "sqlite" | "mysql" | "durable-sqlite";
   sqlitePath: string;
   mysql: {
     host: string;
@@ -30,7 +30,7 @@ export interface Config {
     tls: boolean;
   };
 }
-const devSecret = randomBytes(48).toString("hex");
+let devSecret: string | undefined;
 export const COOKIE_NAME = "relay_session";
 const TTL = 7 * 86400;
 
@@ -91,7 +91,7 @@ export function getConfig(
   return {
     production,
     origin: url.origin,
-    secret: env.SESSION_SECRET || devSecret,
+    secret: env.SESSION_SECRET || (devSecret ??= randomBytes(48).toString("hex")),
     accessCode: env.DEMO_ACCESS_CODE || "",
     writesEnabled: env.RELAY_WRITES_ENABLED !== "false",
     storage: mysqlConfigured ? "mysql" : "sqlite",

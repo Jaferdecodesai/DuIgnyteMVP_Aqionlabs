@@ -1,3 +1,5 @@
+> Historical Node/MySQL baseline. The current deployed release is Cloudflare Workers with native Durable Object SQLite; see [final validation](../evidence/FINAL_RELEASE.md) and [Cloudflare runbook](CLOUDFLARE.md). The current document cap is 1.5 MiB.
+
 # Architecture and security review
 
 Reviewed 16 October 2026 against `node-web-mvp.md` and the prior local prototype API contract. This is a design review, not a claim that implementation or hosted deployment has passed validation.

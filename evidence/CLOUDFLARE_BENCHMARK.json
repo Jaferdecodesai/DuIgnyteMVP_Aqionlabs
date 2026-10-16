@@ -1,0 +1,10 @@
+{
+  "url": "https://aqionrelaydumvp.jafermn.workers.dev",
+  "checked_at": "2026-10-16T12:57:31.719Z",
+  "requests": 20,
+  "scenario": "packaging combined shock; 130 combinations",
+  "measurement": "Sequential end-to-end HTTP from owner workstation; existing workspace; unthrottled network; no comparable baseline or load claim",
+  "p50_ms": 184,
+  "p95_ms": 274,
+  "max_ms": 513
+}

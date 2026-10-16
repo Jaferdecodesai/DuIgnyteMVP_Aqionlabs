@@ -1,0 +1,7 @@
+{
+  "name": "aqion-relay-pitch-source",
+  "private": true,
+  "type": "module",
+  "scripts": { "export": "node scripts/export_deck.mjs" },
+  "devDependencies": { "pptxgenjs": "4.0.1" }
+}

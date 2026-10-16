@@ -12,3 +12,11 @@ evidence/screenshots/
 evidence/downloads/
 dist/
 .DS_Store
+.wrangler/
+.cloudflare-build/
+.dev.vars
+.dev.vars.*
+cloudflare-env.d.ts
+pitch/evidence/font-cache/
+pitch/node_modules/
+pitch/.venv/

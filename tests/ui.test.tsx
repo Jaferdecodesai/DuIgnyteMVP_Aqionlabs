@@ -381,3 +381,36 @@ test("a cash-feasible option with no service improvement cannot be reviewed", as
   expect(screen.getByRole("button", { name: "Review plan" })).toBeDisabled();
   expect(screen.getByText("NO IMPROVEMENT")).toBeInTheDocument();
 });
+
+
+test("one-click challenge demo restores the combined shock and calculates it", async () => {
+  await ready();
+  fireEvent.change(screen.getByLabelText("Shipment delay"), { target: { value: 14 } });
+  fireEvent.click(screen.getByRole("button", { name: "Run challenge demo" }));
+  await screen.findByText("Balanced recovery");
+  expect(fetcher).toHaveBeenCalledWith("/api/simulate", expect.objectContaining({
+    body: JSON.stringify({ tenant: "packaging", scenario: { delay: 7, demand: 20, freight: 25, cash_floor: snapshot.cash_floor } }),
+  }));
+  expect(screen.getByLabelText("Shipment delay")).toHaveValue("7");
+  expect(screen.getByRole("region", { name: "Recommended next step" })).toHaveTextContent("372 additional units");
+});
+test("scenario presets update assumptions and require a new run before review", async () => {
+  await ready();
+  fireEvent.click(screen.getByRole("button", { name: "Run scenario" }));
+  await screen.findByText("Balanced recovery");
+  fireEvent.click(screen.getByRole("button", { name: "Stress test" }));
+  expect(screen.getByLabelText("Shipment delay")).toHaveValue("14");
+  expect(screen.getByLabelText("Demand increase")).toHaveValue("40");
+  expect(screen.getByLabelText("Freight increase")).toHaveValue("75");
+  expect(screen.getByRole("button", { name: "Review plan" })).toBeDisabled();
+  expect(screen.getByRole("button", { name: "Stress test" })).toHaveAttribute("aria-pressed", "true");
+});
+test("owner review explains revalidation without displaying internal source versions", async () => {
+  await ready();
+  fireEvent.click(screen.getByRole("button", { name: "Run scenario" }));
+  await screen.findByText("Balanced recovery");
+  fireEvent.click(screen.getByRole("button", { name: "Review plan" }));
+  const dialog = screen.getByRole("dialog", { name: "Review recovery plan" });
+  expect(dialog).toHaveTextContent("Source freshness, supplier terms and your cash floor are checked again when you save.");
+  expect(dialog).not.toHaveTextContent("Bound to source v1");
+});

@@ -331,7 +331,7 @@ export class RelayService {
       model_version: MODEL_VERSION,
       calc_version: CALC_VERSION,
       retention:
-        "100 undrafted proposals plus referenced drafts, 200 drafts and 200 audit events per SME; 2MiB document ceiling. Synthetic demo only.",
+        "100 undrafted proposals plus referenced drafts, 200 drafts and 200 audit events per SME; 1.5MiB document ceiling. Synthetic demo only.",
     };
   }
 }

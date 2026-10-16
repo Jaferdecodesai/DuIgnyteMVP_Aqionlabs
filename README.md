@@ -1,6 +1,8 @@
-# Aqion Relay — Node web MVP
+# Aqion Relay — ResilienceTech MVP
 
 A mobile-friendly business resilience workbench for the du–Ignyte ResilienceTech concept.
+
+Live MVP: [AqionRelayDuMVP](https://aqionrelaydumvp.jafermn.workers.dev). [Open the pitch](https://aqionrelaydumvp.jafermn.workers.dev/pitch/).
 
 Source repository: [Relay_IgnyteDuChallenge](https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge). Next.js App Router + React + TypeScript run on Node.js 24. No Python runtime or external AI service is required.
 
@@ -31,7 +33,7 @@ npm run build
 npm start -- --port 4633
 ```
 
-The production preview needs the loopback-only settings in `.env.local`. Hosted production instead requires HTTPS, a random signing secret and MySQL. `npm start` listens on `0.0.0.0` and accepts the hosting `PORT` environment variable. A secure local-only preview can use `node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 4633`.
+The local Node production preview needs the loopback-only settings in `.env.local`. The deployed Cloudflare app uses HTTPS, a stable signing secret and a native SQLite-backed Durable Object. `npm start` listens on `0.0.0.0` and accepts the hosting `PORT` environment variable. A secure local-only preview can use `node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 4633`.
 
 ## Try the complete workflow
 
@@ -48,11 +50,11 @@ The default fixture evaluates 130 combinations. Its recommended 400-unit Oasis p
 
 Use the contents of **this directory as the GitHub repository root**, including dotfiles. Do not upload the parent challenge workspace. `.github/workflows/ci.yml` installs from the lockfile, checks types, runs tests and coverage, builds, and audits dependencies. The workflow runs on pushes and pull requests. Check the [Actions page](https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge/actions) for the result for each commit.
 
-Follow [the Hostinger runbook](docs/HOSTINGER.md) for GitHub import, Node 24, build/start settings, environment variables, MySQL setup, smoke tests, backups and rollback. Hostinger deployment is a separate step requiring your hosting configuration.
+Follow [the Cloudflare runbook](docs/CLOUDFLARE.md) for the verified Workers deployment, assets, native SQLite persistence, secrets and rollback. The earlier [Node/MySQL runbook](docs/HOSTINGER.md) is an optional alternative; it is not the deployed architecture.
 
-Local development uses SQLite; hosted mode uses transactional MySQL/MariaDB. There is no silent hosted fallback. The demo is bounded to 200 anonymous workspaces, 100 undrafted proposals plus draft references, 200 drafts and 200 audit entries per SME, and 2 MiB per workspace. Supporting 40,000 SMEs requires identity, normalized tenant storage, distributed rate limiting, workers, observability and load testing; this MVP does not claim that capacity.
+Local Node development uses SQLite. Cloudflare uses native Durable Object SQLite with synchronous atomic transactions. The optional Node hosting adapter uses MySQL/MariaDB. The demo is bounded to 200 anonymous workspaces, 100 undrafted proposals plus draft references, 200 drafts and 200 audit entries per SME, and 1.5 MiB per workspace. Supporting 40,000 SMEs requires identity, normalized tenant storage, distributed rate limiting, workers, observability and load testing; this MVP does not claim that capacity.
 
-The original `du-relay` challenge research and pitch package is separate and unchanged. Competition submission remains separate from GitHub publication and hosted deployment.
+The refined 14-slide pitch is in [pitch/](pitch/): editable PPTX, searchable PDF, offline editable HTML, shared scene source and speaker notes. Both repository and verified live demo links appear on slide 1. The original `du-relay` research package is preserved separately. Competition submission remains separate from GitHub publication and hosted deployment.
 
 ## Evidence and technical notes
 

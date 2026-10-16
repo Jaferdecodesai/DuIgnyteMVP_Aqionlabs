@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-16T12:58:34.680Z",
+  "worker_version": "f3617797-bdc3-48d8-b636-5a4d2ad75d95",
+  "persisted_across_redeploy": true,
+  "drafts": 1,
+  "approval_audit_entries": 1,
+  "published_assets": [
+    {
+      "url": "https://aqionrelaydumvp.jafermn.workers.dev/pitch/",
+      "bytes": 542618,
+      "sha256": "040d8492f08d7bd6963a4fcb8fa7345ff12735e87f237a5208c3b26b51a4a1a9"
+    },
+    {
+      "url": "https://aqionrelaydumvp.jafermn.workers.dev/pitch/Aqion-Relay-Du-Ignyte-Pitch.pdf",
+      "bytes": 180703,
+      "sha256": "0227505be39cf8852df559f8c9b03a86f0aad06622e91a96f8a3cc75da21361d"
+    },
+    {
+      "url": "https://aqionrelaydumvp.jafermn.workers.dev/pitch/Aqion-Relay-Du-Ignyte-Pitch.pptx",
+      "bytes": 539792,
+      "sha256": "f17d8056b7db8698ca44755fa4607a23e86a1530bc281d6471c8afcb252781ae"
+    }
+  ]
+}

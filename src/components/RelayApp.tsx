@@ -78,6 +78,11 @@ const nav = [
   { id: "connections", label: "Connections", icon: Link2 },
   { id: "pilot", label: "Pilot", icon: FlaskConical },
 ] as const;
+const presets = [
+  { label: "Shipment delay", delay: 7, demand: 0, freight: 0 },
+  { label: "Combined shock", delay: 7, demand: 20, freight: 25 },
+  { label: "Stress test", delay: 14, demand: 40, freight: 75 },
+] as const;
 const number = (value: number) =>
   new Intl.NumberFormat("en-AE", { maximumFractionDigits: 0 }).format(value);
 const money = (value: number) =>
@@ -269,10 +274,9 @@ export default function RelayApp() {
     if (proposal) setDirty(true);
     setConfirmed(false);
   };
-  const run = (event: FormEvent) => {
-    event.preventDefault();
+  const runScenario = (inputs: Scenario) => {
     void act(async () => {
-      const p: Proposal = await request("/api/simulate", { tenant, scenario });
+      const p: Proposal = await request("/api/simulate", { tenant, scenario: inputs });
       setProposal(p);
       setDirty(false);
       setExpired(false);
@@ -281,6 +285,15 @@ export default function RelayApp() {
         `Scenario complete. ${number(p.evaluated)} combinations evaluated.`,
       );
     });
+  };
+  const run = (event: FormEvent) => {
+    event.preventDefault();
+    runScenario(scenario);
+  };
+  const applyPreset = (preset: (typeof presets)[number]) => {
+    setScenario((s) => ({ ...s, delay: preset.delay, demand: preset.demand, freight: preset.freight }));
+    if (proposal) setDirty(true);
+    setConfirmed(false);
   };
   const save = () =>
     void act(async () => {
@@ -461,6 +474,7 @@ export default function RelayApp() {
       </aside>
       <div className="main-column">
         <header className="topbar">
+          <div className="mobile-brand"><Brand /></div>
           <div className="breadcrumb">
             Workspace <ChevronRight size={14} />
             <strong>{nav.find((n) => n.id === view)?.label}</strong>
@@ -531,8 +545,8 @@ export default function RelayApp() {
               <Clock3 size={14} />
               Scenario starts {snap.as_of}
             </span>
-            <span className={`badge ${snap.age_hours > 24 ? "amber" : ""}`}>
-              Fixture age {snap.age_hours}h
+            <span className={`badge ${snap.age_hours > 24 ? "amber" : ""}`} title="Modeled source age within the fictional scenario">
+              Source age {snap.age_hours}h
             </span>
           </div>
           {error && (
@@ -556,8 +570,28 @@ export default function RelayApp() {
               scenarios and export existing evidence.
             </div>
           )}
+          {snap.age_hours > 24 && (
+            <div className="notice amber"><Clock3 size={18} /><span>This source is older than the 24-hour freshness limit. You can inspect projections; approval stays blocked until you import a fresh synthetic snapshot or restore the original fixture in Connections.</span></div>
+          )}
           {view === "overview" && (
             <>
+              {!proposal && (
+                <section className="demo-launchpad" aria-label="Challenge demo walkthrough">
+                  <div>
+                    <span className="eyebrow">EXPLORE THE WORKING MVP</span>
+                    <h2>From delayed shipment to a cash-feasible recovery.</h2>
+                    <p>Model a combined shock, compare feasible options, then approve an unsent draft. All data is fictional.</p>
+                  </div>
+                  <button className="button primary" disabled={busy} onClick={() => {
+                    const demo = { delay: 7, demand: 20, freight: 25, cash_floor: snap.cash_floor };
+                    setScenario(demo);
+                    setConfirmed(false);
+                    runScenario(demo);
+                  }}>
+                    {busy ? "Calculating…" : "Run challenge demo"}<ArrowRight size={18} />
+                  </button>
+                </section>
+              )}
               <div className="overview-summary">
                 <div>
                   <span className="summary-square">
@@ -605,6 +639,16 @@ export default function RelayApp() {
                     <span className="step-tag">01</span>
                   </div>
                   <form onSubmit={run}>
+                    <fieldset className="preset-field" disabled={busy}>
+                      <legend>Start with a scenario</legend>
+                      <div className="preset-buttons">
+                        {presets.map((preset) => (
+                          <button key={preset.label} type="button"
+                            aria-pressed={scenario.delay === preset.delay && scenario.demand === preset.demand && scenario.freight === preset.freight}
+                            onClick={() => applyPreset(preset)}>{preset.label}</button>
+                        ))}
+                      </div>
+                    </fieldset>
                     <Range
                       label="Shipment delay"
                       value={scenario.delay}
@@ -619,7 +663,7 @@ export default function RelayApp() {
                       value={scenario.demand}
                       suffix="%"
                       min={0}
-                      max={80}
+                      max={100}
                       onChange={(v) => change("demand", v)}
                       disabled={busy}
                     />
@@ -628,7 +672,7 @@ export default function RelayApp() {
                       value={scenario.freight}
                       suffix="%"
                       min={0}
-                      max={100}
+                      max={200}
                       onChange={(v) => change("freight", v)}
                       disabled={busy}
                     />
@@ -730,6 +774,16 @@ export default function RelayApp() {
                         <div className="notice error">
                           {proposal.blocked.join(" ")}
                         </div>
+                      )}
+                      {recommended && !dirty && !expired && !blocked && (
+                        <section className="decision-summary" aria-label="Recommended next step">
+                          <span className="decision-icon"><ShieldCheck size={23} /></span>
+                          <div>
+                            <span className="eyebrow">RECOMMENDED NEXT STEP</span>
+                            <h3>{recommended.orders.map((order) => `${number(order.qty)} units from ${order.name}`).join(" + ")}</h3>
+                            <p>{number(recommended.fulfilled - proposal.baseline.fulfilled)} additional units fulfilled · {money(recommended.min_cash - proposal.scenario.cash_floor)} above your cash floor</p>
+                          </div>
+                        </section>
                       )}
                       <div className="projection-metrics">
                         <Metric
@@ -958,8 +1012,7 @@ export default function RelayApp() {
                       ))}
                     </div>
                     <p className="footnote">
-                      Bounded candidate enumeration; the result is not a claim
-                      of global optimality. All supplier terms are fictional.
+                      Plans are compared within the modeled supplier quantities, lead times and cash constraints. All supplier terms are fictional.
                     </p>
                   </>
                 )}
@@ -1106,6 +1159,13 @@ export default function RelayApp() {
                     ))}
                   </div>
                 )}
+                <details className="evidence-source">
+                  <summary>Source identity & verification details</summary>
+                  <p>Saved proposals are bound to the exact source and scenario. A changed source, expired proposal or cash-floor breach prevents approval.</p>
+                  <dl><div><dt>Current source version</dt><dd className="mono">{state.version}</dd></div>
+                  {proposal && <div><dt>Latest scenario source</dt><dd className="mono">{proposal.version}</dd></div>}</dl>
+                  <p>Export evidence to inspect calculation versions and source fingerprints.</p>
+                </details>
                 <div className="panel-foot">
                   <ShieldCheck size={16} />
                   Nothing is sent to suppliers. No money moves.
@@ -1419,7 +1479,7 @@ export default function RelayApp() {
               Your decision. Your approval.
             </span>
             <span>Aqion Relay · Synthetic ResilienceTech MVP</span>
-            <span>Anonymous browser workspace</span>
+            <span><a href="/pitch/" target="_blank" rel="noopener noreferrer">Pitch deck</a> · <a href="https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge" target="_blank" rel="noopener noreferrer">GitHub</a></span>
           </footer>
         </main>
       </div>
@@ -1482,8 +1542,7 @@ export default function RelayApp() {
               );
             })}
             <p className="footnote">
-              Bound to source {proposal.version}. The server rechecks expiry,
-              source validity, cash constraints and outstanding drafts.
+              Source freshness, supplier terms and your cash floor are checked again when you save. Only one unsent draft can be active for this SME.
             </p>
             {(error || expired) && (
               <div className="notice error">
@@ -1701,6 +1760,12 @@ function ProjectionChart({
           {d}
         </text>
       ))}
+      {recovery.length > 0 && (
+        <polygon
+          points={`52,180 ${points(recovery)} 586,180`}
+          fill="var(--teal-soft)"
+        />
+      )}
       {measure === "cash" && (
         <line
           x1="52"
@@ -1709,12 +1774,6 @@ function ProjectionChart({
           y2={y(floor)}
           stroke="var(--amber)"
           strokeDasharray="3 4"
-        />
-      )}
-      {recovery.length > 0 && (
-        <polygon
-          points={`52,180 ${points(recovery)} 586,180`}
-          fill="var(--teal-soft)"
         />
       )}
       <polyline

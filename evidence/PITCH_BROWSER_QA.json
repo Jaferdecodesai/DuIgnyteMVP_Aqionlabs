@@ -1,0 +1,43 @@
+{
+  "tested_at": "2026-10-16T12:59:21.175Z",
+  "navigation": true,
+  "edit_save_reload": true,
+  "responsive": [
+    {
+      "height": 1000,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "slides": 14,
+      "width": 1440
+    },
+    {
+      "height": 768,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "slides": 14,
+      "width": 1024
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "slides": 14,
+      "width": 390
+    },
+    {
+      "height": 390,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "slides": 14,
+      "width": 844
+    },
+    {
+      "height": 740,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "slides": 14,
+      "width": 320
+    }
+  ],
+  "portable_html_export": true
+}

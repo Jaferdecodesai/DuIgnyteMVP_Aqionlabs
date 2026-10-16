@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { SqliteStore } from "../src/lib/storage";
+import { SqliteStore, encodeDocument } from "../src/lib/storage";
 
 let directory: string;
 let store: SqliteStore<{ count: number }>;
@@ -16,6 +16,9 @@ afterEach(async () => {
   if (directory) await rm(directory, { recursive: true, force: true });
 });
 describe("persistent workspace transactions", () => {
+  it("reserves native SQL row overhead below a two MiB row ceiling", () => {
+    expect(() => encodeDocument({ padding: "x".repeat(1_600_000) })).toThrow(/limit/i);
+  });
   it("persists committed state after reopen", async () => {
     const s = await fresh();
     await s.transact(

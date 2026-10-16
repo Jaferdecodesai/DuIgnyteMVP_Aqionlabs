@@ -1,0 +1,7 @@
+{
+  "github": "https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge",
+  "mvp": "https://aqionrelaydumvp.jafermn.workers.dev",
+  "deployment": "Cloudflare Workers + SQLite-backed Durable Object",
+  "status": "Verified live Cloudflare demonstration",
+  "date": "16 October 2026"
+}

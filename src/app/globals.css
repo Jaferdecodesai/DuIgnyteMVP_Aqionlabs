@@ -95,7 +95,7 @@ small,
   overflow-wrap: anywhere;
 }
 .eyebrow {
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   letter-spacing: 1.5px;
   font-weight: 700;
   color: var(--teal-dark);
@@ -106,7 +106,7 @@ small,
   gap: 10px;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
+  min-height: 48px;
   padding: 11px 17px;
   border: 1px solid transparent;
   border-radius: 8px;
@@ -156,7 +156,7 @@ small,
   border-radius: 5px;
   background: var(--teal-soft);
   color: var(--teal-dark);
-  font-size: 0.59rem;
+  font-size: 0.75rem;
   letter-spacing: 0.6px;
   font-weight: 700;
   line-height: 1.4;
@@ -294,13 +294,7 @@ small,
   margin-left: 4px;
 }
 .brand small {
-  display: block;
-  color: var(--muted);
-  font-size: 0.39rem;
-  letter-spacing: 1.05px;
-  line-height: 1.8;
-  margin-top: 5px;
-  font-weight: 500;
+  display: none;
 }
 .app-shell {
   display: flex;
@@ -333,7 +327,7 @@ small,
   z-index: 20;
 }
 .workspace-label {
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 1.1px;
   color: #667d74;
@@ -377,7 +371,7 @@ small,
   background: #fff;
   border-radius: 4px;
   color: var(--teal-dark);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
 }
 .sidebar-bottom {
   margin-top: auto;
@@ -398,12 +392,12 @@ small,
   font-size: 0.8rem;
 }
 .demo-card p {
-  font-size: 0.74rem;
+  font-size: 0.75rem;
   margin: 6px 0 12px;
   line-height: 1.65;
 }
 .demo-card > span {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   display: inline-block;
   border-top: 1px solid var(--border);
   padding-top: 10px;
@@ -416,7 +410,7 @@ small,
   justify-content: center;
   gap: 5px;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   margin-top: 22px;
 }
 .byline strong {
@@ -441,7 +435,7 @@ small,
   align-items: center;
   gap: 10px;
   color: var(--muted);
-  font-size: 0.73rem;
+  font-size: 0.75rem;
 }
 .breadcrumb strong {
   color: var(--ink);
@@ -456,7 +450,7 @@ small,
   background: #fff;
   border-radius: 6px;
   padding: 5px 9px;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--muted);
   white-space: nowrap;
 }
@@ -473,7 +467,7 @@ small,
   border: 1px solid #d4e2dc;
   display: grid;
   place-items: center;
-  font-size: 0.64rem;
+  font-size: 0.75rem;
   color: var(--teal-dark);
   background: #e7f0eb;
 }
@@ -500,7 +494,7 @@ main {
 }
 .tenant-control > span {
   display: block;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: var(--muted);
@@ -526,7 +520,7 @@ main {
   flex-wrap: wrap;
   padding: 11px 15px;
   margin-bottom: 22px;
-  font-size: 0.69rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .snapshot-strip strong {
@@ -573,7 +567,7 @@ main {
   gap: 4px;
 }
 .overview-summary > div > div > span {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .overview-summary strong {
@@ -622,7 +616,7 @@ main {
   min-width: 0;
 }
 .panel-heading p {
-  font-size: 0.69rem;
+  font-size: 0.75rem;
   margin-top: 4px;
 }
 .panel-heading > .button {
@@ -640,7 +634,7 @@ main {
 }
 .step-tag {
   align-self: flex-start;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: #74897e;
   border: 1px solid var(--border);
   border-radius: 5px;
@@ -658,7 +652,7 @@ main {
   font-weight: 500;
 }
 .range-field output {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   color: var(--teal-dark);
   background: var(--teal-soft);
   border-radius: 5px;
@@ -670,8 +664,8 @@ main {
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
-  height: 30px;
-  margin: 8px 0 1px;
+  height: 44px;
+  margin: 2px 0 0;
   background: transparent;
   cursor: ew-resize;
 }
@@ -716,7 +710,7 @@ main {
 .range-ends {
   display: flex;
   justify-content: space-between;
-  font-size: 0.59rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .floor-field {
@@ -748,14 +742,14 @@ main {
   font-weight: 600;
 }
 .floor-field > div > span {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .floor-field svg {
   color: var(--teal);
 }
 .floor-field p {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   margin-top: 8px;
   line-height: 1.6;
 }
@@ -765,7 +759,7 @@ main {
   justify-content: space-between;
 }
 .private-note {
-  font-size: 0.59rem;
+  font-size: 0.75rem;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -838,7 +832,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  font-size: 0.59rem;
+  font-size: 0.75rem;
   color: var(--muted);
   margin-top: 30px;
 }
@@ -856,7 +850,7 @@ main {
   min-width: 0;
 }
 .metric > span {
-  font-size: 0.64rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .metric > strong {
@@ -867,7 +861,7 @@ main {
   overflow-wrap: anywhere;
 }
 .metric > small {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .chart-heading {
@@ -876,7 +870,7 @@ main {
   justify-content: space-between;
   gap: 10px;
   margin: 20px 0 12px;
-  font-size: 0.57rem;
+  font-size: 0.75rem;
   letter-spacing: 0.7px;
   font-weight: 600;
   color: var(--muted);
@@ -889,7 +883,7 @@ main {
   border-radius: 7px;
 }
 .segmented button {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   border: 0;
   border-radius: 5px;
   background: transparent;
@@ -913,14 +907,14 @@ main {
 .projection-chart text {
   fill: var(--muted);
   font-family: inherit;
-  font-size: 10px;
+  font-size: 15px;
 }
 .chart-legend {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--muted);
   margin: 12px 0;
 }
@@ -940,7 +934,7 @@ main {
   border-top: 2px dashed var(--amber);
 }
 .daily-details summary {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   min-height: 40px;
   padding: 10px 0;
   color: var(--teal-dark);
@@ -951,12 +945,12 @@ main {
   gap: 8px;
   border-top: 1px solid var(--border);
   padding-top: 15px;
-  font-size: 0.67rem;
+  font-size: 0.75rem;
   color: var(--teal-dark);
   margin-top: 8px;
 }
 .options-panel > .panel-heading > span:last-child {
-  font-size: 0.59rem;
+  font-size: 0.75rem;
   text-align: right;
 }
 .empty-compact {
@@ -1010,7 +1004,7 @@ main {
   font-size: 0.92rem;
 }
 .plan-description {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   margin-top: 7px;
   min-height: 44px;
 }
@@ -1019,7 +1013,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  font-size: 0.69rem;
+  font-size: 0.75rem;
 }
 .plan-card dl > div {
   display: flex;
@@ -1045,12 +1039,12 @@ main {
   align-items: center;
   justify-content: center;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   border-radius: 8px;
   background: var(--canvas);
 }
 .plan-reason {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   color: var(--amber);
   padding: 10px;
   background: var(--amber-soft);
@@ -1058,7 +1052,7 @@ main {
   margin-bottom: 14px;
 }
 .footnote {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   line-height: 1.7;
   margin: 15px 0 0;
   color: var(--muted);
@@ -1091,7 +1085,7 @@ main {
 }
 .assumptions details > div {
   padding: 0 24px 24px;
-  font-size: 0.74rem;
+  font-size: 0.75rem;
   line-height: 1.8;
 }
 .assumptions p {
@@ -1105,7 +1099,7 @@ main {
   margin-bottom: 6px;
 }
 .assumptions .mono {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
 }
 .table-scroll {
   overflow: auto;
@@ -1116,7 +1110,7 @@ main {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 th {
@@ -1124,7 +1118,7 @@ th {
   color: var(--muted);
   font-weight: 600;
   background: #f7faf8;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
 }
 th,
 td {
@@ -1137,7 +1131,7 @@ tr:last-child td {
 td small {
   display: block;
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   margin-top: 3px;
 }
 .empty-state {
@@ -1165,7 +1159,7 @@ td small {
   border-top: 1px solid var(--border);
   padding-top: 16px;
   margin-top: 22px;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .draft-list {
@@ -1190,7 +1184,7 @@ td small {
 }
 .draft-card small {
   display: block;
-  font-size: 0.64rem;
+  font-size: 0.75rem;
   color: var(--muted);
   margin-top: 10px;
 }
@@ -1248,12 +1242,12 @@ td small {
   font-weight: 600;
 }
 .timeline p {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   overflow-wrap: anywhere;
   margin: 5px 0;
 }
 .timeline time {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .source-grid {
@@ -1272,7 +1266,7 @@ td small {
   margin-bottom: 15px;
 }
 .source-card > .badge {
-  font-size: 0.52rem;
+  font-size: 0.75rem;
   margin-bottom: 12px;
 }
 .source-card h2 {
@@ -1286,12 +1280,12 @@ td small {
   display: block;
 }
 .source-card p {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   margin: 10px 0 16px;
   line-height: 1.7;
 }
 .source-card small {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .import-area {
@@ -1370,7 +1364,7 @@ td small {
   justify-content: center;
 }
 .pilot-target > span {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 1px;
   color: var(--teal-dark);
   font-weight: 600;
@@ -1385,7 +1379,7 @@ td small {
 }
 .pilot-target small {
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   margin-top: 12px;
 }
 .pilot-card h2 {
@@ -1413,7 +1407,7 @@ td small {
   border: 1px solid #c9e0d5;
   border-radius: 8px;
   color: var(--teal-dark);
-  font-size: 0.73rem;
+  font-size: 0.75rem;
   font-weight: 600;
   margin-bottom: 16px;
 }
@@ -1422,7 +1416,7 @@ td small {
   margin-bottom: 8px;
 }
 .pilot-stages p {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   line-height: 1.8;
 }
 .workspace-footer {
@@ -1432,7 +1426,7 @@ td small {
   justify-content: space-between;
   gap: 15px;
   color: var(--muted);
-  font-size: 0.61rem;
+  font-size: 0.75rem;
   padding: 24px 0 28px;
   margin-top: 28px;
 }
@@ -1499,7 +1493,7 @@ dialog > p {
   font-size: 0.75rem;
 }
 .review-order small {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .confirm-check {
@@ -1528,6 +1522,66 @@ dialog > p {
   margin-top: 25px;
   flex-wrap: wrap;
 }
+.mobile-brand { display: none; }
+.demo-launchpad {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 23px 26px;
+  margin-bottom: 24px;
+  background: linear-gradient(110deg, #e6f3ed 0%, #f8fcfa 100%);
+  border: 1px solid #bcd8ca;
+  border-radius: var(--radius);
+}
+.demo-launchpad .eyebrow { display: block; margin-bottom: 6px; }
+.demo-launchpad h2 { font-size: 1.1rem; }
+.demo-launchpad p { max-width: 660px; font-size: .8125rem; margin-top: 7px; }
+.demo-launchpad .button { flex-shrink: 0; }
+.preset-field {
+  border: 0;
+  padding: 0 0 17px;
+  margin: 0 0 7px;
+  min-width: 0;
+  border-bottom: 1px solid var(--border);
+  grid-column: 1 / -1;
+}
+.preset-field legend { color: var(--muted); font-size: .75rem; margin-bottom: 9px; }
+.preset-buttons { display: flex; flex-wrap: wrap; gap: 7px; }
+.preset-buttons button {
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 8px 10px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .75rem;
+  font-weight: 500;
+  transition: background .18s, border-color .18s;
+}
+.preset-buttons button:hover { border-color: var(--teal); }
+.preset-buttons button[aria-pressed="true"] { background: var(--teal-soft); border-color: var(--teal); color: var(--teal-dark); }
+.decision-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px;
+  background: #edf7f1;
+  border: 1px solid #c4dfd0;
+  border-radius: 10px;
+  margin-bottom: 23px;
+}
+.decision-summary .eyebrow { display: block; margin-bottom: 5px; font-size: .7rem; letter-spacing: .9px; }
+.decision-summary h3 { font-size: .9rem; }
+.decision-summary p { font-size: .75rem; margin-top: 6px; color: var(--teal-dark); }
+.decision-icon { color: var(--teal); padding-top: 2px; }
+.evidence-source { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 8px; }
+.evidence-source summary { min-height: 48px; padding: 12px 0; color: var(--teal-dark); font-size: .8125rem; }
+.evidence-source p { font-size: .8125rem; max-width: 680px; }
+.evidence-source dl { margin: 14px 0; font-size: .75rem; }
+.evidence-source dt { color: var(--muted); margin: 12px 0 4px; }
+.evidence-source dd { margin: 0; }
+
 @media (min-width: 1500px) {
   .plan-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1587,7 +1641,7 @@ dialog > p {
     font-size: 0.95rem;
   }
   .panel-heading > .badge {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
   .source-grid {
     gap: 14px;
@@ -1613,7 +1667,7 @@ dialog > p {
     width: 28px;
   }
   .brand small {
-    font-size: 0.32rem;
+    display: none;
   }
   .main-column {
     margin-left: 180px;
@@ -1740,6 +1794,19 @@ dialog > p {
   }
 }
 @media (max-width: 700px) {
+  .mobile-brand { display: block; min-width: 0; }
+  .mobile-brand .brand { font-size: 1.23rem; gap: 5px; letter-spacing: -.8px; }
+  .mobile-brand .brand-mark { width: 27px; height: 32px; }
+  .topbar .breadcrumb, .topbar .avatar { display: none; }
+  .topbar .demo-pill { font-size: .6875rem; padding: 5px 7px; }
+  .demo-launchpad { padding: 20px; flex-direction: column; align-items: flex-start; gap: 17px; }
+  .demo-launchpad .button { width: 100%; justify-content: space-between; }
+  .demo-launchpad h2 { font-size: 1.05rem; }
+  .demo-launchpad p { font-size: .8125rem; }
+  .projection-chart text { font-size: 21px; }
+  .decision-summary { padding: 14px; gap: 10px; }
+  .decision-summary h3 { font-size: .875rem; }
+  .preset-buttons button { min-height: 48px; }
   body {
     font-size: 1rem;
   }
@@ -1771,7 +1838,7 @@ dialog > p {
     padding: 6px 3px;
     position: relative;
     border-radius: 8px;
-    font-size: 0.62rem;
+    font-size: 0.75rem;
     min-height: 61px;
   }
   .nav-item > svg {
@@ -1786,7 +1853,7 @@ dialog > p {
     top: 2px;
     left: calc(50% + 8px);
     border: 1px solid var(--border);
-    font-size: 0.55rem;
+    font-size: 0.75rem;
     height: 17px;
     min-width: 17px;
   }
@@ -1801,23 +1868,23 @@ dialog > p {
     gap: 12px;
   }
   .breadcrumb {
-    font-size: 0.66rem;
+    font-size: 0.75rem;
     gap: 5px;
   }
   .demo-pill {
-    font-size: 0.61rem;
+    font-size: 0.75rem;
     padding: 5px 7px;
   }
   .avatar {
     width: 27px;
     height: 27px;
-    font-size: 0.56rem;
+    font-size: 0.75rem;
   }
   main {
     padding: 27px 18px 0;
   }
   .eyebrow {
-    font-size: 0.59rem;
+    font-size: 0.75rem;
     letter-spacing: 1.1px;
   }
   .page-heading {
@@ -1840,7 +1907,7 @@ dialog > p {
     min-width: 0;
   }
   .tenant-control > span {
-    font-size: 0.59rem;
+    font-size: 0.75rem;
   }
   .tenant-control select {
     font-size: 0.88rem;
@@ -1849,14 +1916,14 @@ dialog > p {
   .snapshot-strip {
     gap: 8px 10px;
     padding: 12px;
-    font-size: 0.66rem;
+    font-size: 0.75rem;
     margin-bottom: 18px;
   }
   .snapshot-date {
-    font-size: 0.61rem;
+    font-size: 0.75rem;
   }
   .snapshot-strip > .badge {
-    font-size: 0.52rem;
+    font-size: 0.75rem;
   }
   .snapshot-icon {
     width: 25px;
@@ -1871,10 +1938,10 @@ dialog > p {
     gap: 9px;
   }
   .overview-summary > div > div > span {
-    font-size: 0.57rem;
+    font-size: 0.75rem;
   }
   .overview-summary strong {
-    font-size: 0.73rem;
+    font-size: 0.75rem;
     line-height: 1.5;
   }
   .overview-summary .summary-square {
@@ -1899,14 +1966,14 @@ dialog > p {
     font-size: 1rem;
   }
   .panel-heading p {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
   }
   .panel-heading > .button {
     width: 100%;
     margin-top: 4px;
   }
   .panel-heading > .badge {
-    font-size: 0.49rem;
+    font-size: 0.75rem;
   }
   .panel-heading > .section-icon {
     display: none;
@@ -1925,12 +1992,12 @@ dialog > p {
     font-size: 0.84rem;
   }
   .range-field output {
-    font-size: 0.74rem;
+    font-size: 0.75rem;
     padding: 4px 8px;
   }
   .range-field input {
-    height: 38px;
-    margin: 8px 0 2px;
+    height: 48px;
+    margin: 3px 0 0;
   }
   .range-field input::-webkit-slider-thumb {
     width: 19px;
@@ -1942,7 +2009,7 @@ dialog > p {
     height: 15px;
   }
   .range-ends {
-    font-size: 0.66rem;
+    font-size: 0.75rem;
   }
   .floor-field {
     border-top: 1px solid var(--border);
@@ -1959,7 +2026,7 @@ dialog > p {
     min-height: 50px;
   }
   .floor-field p {
-    font-size: 0.71rem;
+    font-size: 0.75rem;
   }
   .button {
     min-height: 48px;
@@ -1970,7 +2037,7 @@ dialog > p {
     margin-top: 23px;
   }
   .private-note {
-    font-size: 0.64rem;
+    font-size: 0.75rem;
     margin-top: 12px;
   }
   .projection-empty {
@@ -1985,14 +2052,14 @@ dialog > p {
   }
   .empty-flow {
     gap: 5px;
-    font-size: 0.57rem;
+    font-size: 0.75rem;
   }
   .projection-metrics {
     gap: 10px;
     padding-bottom: 19px;
   }
   .metric > span {
-    font-size: 0.59rem;
+    font-size: 0.75rem;
     line-height: 1.6;
   }
   .metric > strong {
@@ -2000,35 +2067,35 @@ dialog > p {
     letter-spacing: -0.35px;
   }
   .metric > small {
-    font-size: 0.56rem;
+    font-size: 0.75rem;
     line-height: 1.6;
   }
   .chart-heading {
-    font-size: 0.52rem;
+    font-size: 0.75rem;
     letter-spacing: 0.4px;
     gap: 6px;
     flex-wrap: wrap;
   }
   .segmented button {
-    min-height: 40px;
+    min-height: 48px;
     padding: 7px 12px;
-    font-size: 0.68rem;
+    font-size: 0.75rem;
   }
   .projection-chart {
     min-height: 150px;
   }
   .chart-legend {
-    font-size: 0.58rem;
+    font-size: 0.75rem;
     gap: 10px;
     justify-content: flex-start;
   }
   .daily-details summary {
     min-height: 48px;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     padding: 13px 0;
   }
   .outcome-note {
-    font-size: 0.71rem;
+    font-size: 0.75rem;
     line-height: 1.7;
   }
   .plan-grid {
@@ -2054,10 +2121,10 @@ dialog > p {
     margin: 22px 0;
   }
   .plan-card .badge {
-    font-size: 0.59rem;
+    font-size: 0.75rem;
   }
   .plan-reason {
-    font-size: 0.73rem;
+    font-size: 0.75rem;
   }
   .plan-card .button {
     margin-top: 8px;
@@ -2066,12 +2133,12 @@ dialog > p {
     font-size: 0.76rem;
   }
   .options-panel > .panel-heading > span:last-child {
-    font-size: 0.58rem;
+    font-size: 0.75rem;
     width: 100%;
     text-align: left;
   }
   .footnote {
-    font-size: 0.69rem;
+    font-size: 0.75rem;
   }
   .assumptions {
     padding: 0;
@@ -2086,7 +2153,7 @@ dialog > p {
     font-size: 0.78rem;
   }
   .assumptions .mono {
-    font-size: 0.66rem;
+    font-size: 0.75rem;
   }
   .notice {
     font-size: 0.78rem;
@@ -2104,7 +2171,7 @@ dialog > p {
     font-size: 0.78rem;
   }
   .source-card small {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
   }
   .source-card > strong {
     font-size: 1.7rem;
@@ -2132,7 +2199,7 @@ dialog > p {
     padding: 17px;
   }
   .draft-card h3 {
-    font-size: 0.73rem;
+    font-size: 0.75rem;
   }
   .draft-card p {
     font-size: 0.78rem;
@@ -2145,7 +2212,7 @@ dialog > p {
     font-size: 1.1rem;
   }
   .panel-foot {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     line-height: 1.75;
   }
   .timeline {
@@ -2158,7 +2225,7 @@ dialog > p {
     font-size: 0.75rem;
   }
   .timeline time {
-    font-size: 0.67rem;
+    font-size: 0.75rem;
   }
   .pilot-hero {
     padding: 24px;
@@ -2188,7 +2255,7 @@ dialog > p {
     font-size: 0.77rem;
   }
   .workspace-footer {
-    font-size: 0.61rem;
+    font-size: 0.75rem;
     gap: 10px;
     padding: 20px 0 25px;
     flex-direction: column;
@@ -2217,7 +2284,7 @@ dialog > p {
     gap: 15px;
   }
   .review-stats .metric > span {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
   }
   .review-stats .metric > strong {
     font-size: 0.95rem;
@@ -2227,7 +2294,7 @@ dialog > p {
     font-size: 0.77rem;
   }
   .review-order small {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
   }
   .confirm-check {
     font-size: 0.81rem;

@@ -1,3 +1,5 @@
+> Historical Node/MySQL baseline. The current deployed release is Cloudflare Workers with native Durable Object SQLite; see [final validation](../evidence/FINAL_RELEASE.md) and [Cloudflare runbook](CLOUDFLARE.md). The current document cap is 1.5 MiB.
+
 # GitHub → Hostinger deployment runbook
 
 Prepared and source-checked 16 October 2026. This runbook is ready for the account owner. The source repository is [Relay_IgnyteDuChallenge](https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge); hosted database and deployment configuration remain separate steps.

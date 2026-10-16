@@ -1,0 +1,18 @@
+{
+  "base": "https://aqionrelaydumvp.jafermn.workers.dev",
+  "checked_at": "2026-10-16T12:58:38.925Z",
+  "passed": 11,
+  "checks": [
+    "native SQLite readiness and security headers",
+    "HTML shell and API routing",
+    "signed session cookie and isolated workspace",
+    "origin and CSRF rejection",
+    "reference 130-combination cash-feasible scenario",
+    "foreign proposal and unchecked confirmation rejected",
+    "concurrent approvals yield one draft and audit record",
+    "export contains evidence and no authentication material",
+    "cancellation and invalid import retain source",
+    "import invalidates earlier proposal and stale source blocks action",
+    "reset confirmation and retained persistence probe"
+  ]
+}
