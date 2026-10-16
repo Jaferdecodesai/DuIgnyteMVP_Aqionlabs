@@ -2,7 +2,7 @@
 
 # GitHub → Hostinger deployment runbook
 
-Prepared and source-checked 16 October 2026. This runbook is ready for the account owner. The source repository is [Relay_IgnyteDuChallenge](https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge); hosted database and deployment configuration remain separate steps.
+Prepared and source-checked 16 October 2026. This runbook is ready for the account owner. The source repository is [DuIgnyteMVP_Aqionlabs](https://github.com/Jaferdecodesai/DuIgnyteMVP_Aqionlabs); hosted database and deployment configuration remain separate steps.
 
 ## Account and source preparation
 

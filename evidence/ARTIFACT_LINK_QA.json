@@ -1,0 +1,40 @@
+{
+  "pitch_slides": 14,
+  "architecture_pages": 7,
+  "cover_url_column": 310,
+  "brand_on_all_slides": "aqionlabs.ai",
+  "links_verified_on_slides": [
+    1,
+    7,
+    8,
+    14
+  ],
+  "dashboard_image_hyperlinked": true,
+  "files": [
+    {
+      "file": "Aqion-Relay-Du-Ignyte-Pitch.pdf",
+      "bytes": 182637,
+      "sha256": "618c040a5e93b2bf7a49544bc4aa2c6c0705c3278fbe6326b368257670893afa"
+    },
+    {
+      "file": "Aqion-Relay-Du-Ignyte-Pitch.pptx",
+      "bytes": 551839,
+      "sha256": "22e5f57d0ccb692113359182eb313c0904773e399032152b7e4bf25dcc4e4136"
+    },
+    {
+      "file": "Aqion-Relay-Du-Ignyte-Pitch.html",
+      "bytes": 545572,
+      "sha256": "10b5a6919a9d90313fcb84bad2dc4116e00e9f266b65ed3ebb285d967cbb3e97"
+    },
+    {
+      "file": "Aqion-Relay-System-Design.docx",
+      "bytes": 109505,
+      "sha256": "142544ca458778af2502ddecad9c5dfb857973e3c16fc5a6310dd9127a628219"
+    },
+    {
+      "file": "Aqion-Relay-System-Design.pdf",
+      "bytes": 216672,
+      "sha256": "c140054fe6d3606d9028bcee7190087456079083ee6ca1fa4aebc7c316a60921"
+    }
+  ]
+}

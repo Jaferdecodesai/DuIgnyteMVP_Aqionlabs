@@ -1,6 +1,6 @@
 # Aqion Relay — Cloudflare and judge-ready pitch refinement
 
-16 October 2026. Owner authorizes refinement, publication updates and deployment to their existing Cloudflare account. Target Worker name begins `aqionrelaydumvp` (DNS lowercase form of AqionRelayDuMVP). The first pitch slide must contain the verified live URL and public GitHub repository link.
+16 October 2026. Owner authorizes refinement, publication updates and deployment to their existing Cloudflare account. Target Worker name begins `duignytemvp` (DNS lowercase form of AqionRelayDuMVP). The first pitch slide must contain the verified live URL and public GitHub repository link.
 
 ## Delivery requirements
 

@@ -2,9 +2,20 @@
 
 A mobile-friendly business resilience workbench for the du–Ignyte ResilienceTech concept.
 
-Live MVP: [AqionRelayDuMVP](https://aqionrelaydumvp.jafermn.workers.dev). [Open the pitch](https://aqionrelaydumvp.jafermn.workers.dev/pitch/).
+## Open the MVP and documents
 
-Source repository: [Relay_IgnyteDuChallenge](https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge). Next.js App Router + React + TypeScript run on Node.js 24. No Python runtime or external AI service is required.
+| Resource | Open or download |
+| --- | --- |
+| **Live MVP** | **[duignytemvp.aqionlabs.workers.dev](https://duignytemvp.aqionlabs.workers.dev)** |
+| **Pitch deck** | [Interactive HTML](https://duignytemvp.aqionlabs.workers.dev/pitch/) · [PDF](Aqion-Relay-Du-Ignyte-Pitch.pdf) · [Editable PowerPoint](Aqion-Relay-Du-Ignyte-Pitch.pptx) · [Offline HTML](Aqion-Relay-Du-Ignyte-Pitch.html) |
+| **System architecture** | [Read in GitHub](ARCHITECTURE.md) · [Editable Word document](Aqion-Relay-System-Design.docx) · [PDF](Aqion-Relay-System-Design.pdf) |
+| **Deployment and validation** | [Cloudflare runbook](docs/CLOUDFLARE.md) · [Renamed release checks](evidence/RENAMED_RELEASE.md) · [GitHub Actions](https://github.com/Jaferdecodesai/DuIgnyteMVP_Aqionlabs/actions) |
+
+The pitch and architecture files are at the repository root for quick access. The pitch shows the live MVP and GitHub URLs on the cover, Working MVP and closing slides. The dashboard image opens the live MVP, and the architecture slide links to the editable system design. All slides use **aqionlabs.ai** branding at the top right.
+
+Live MVP: [AqionRelayDuMVP](https://duignytemvp.aqionlabs.workers.dev). [Open the pitch](https://duignytemvp.aqionlabs.workers.dev/pitch/).
+
+Source repository: [DuIgnyteMVP_Aqionlabs](https://github.com/Jaferdecodesai/DuIgnyteMVP_Aqionlabs). Next.js App Router + React + TypeScript run on Node.js 24. No Python runtime or external AI service is required.
 
 **Synthetic demonstration.** Three fictional SMEs, suppliers and operational histories are included. The numerical forecast fits synthetic observations; explanations use deterministic templates. Approvals create unsent drafts. No supplier order is transmitted and no money moves. du APIs, banking and ERP connections remain proposed.
 
@@ -48,7 +59,7 @@ The default fixture evaluates 130 combinations. Its recommended 400-unit Oasis p
 
 ## Deployment and handoff
 
-Use the contents of **this directory as the GitHub repository root**, including dotfiles. Do not upload the parent challenge workspace. `.github/workflows/ci.yml` installs from the lockfile, checks types, runs tests and coverage, builds, and audits dependencies. The workflow runs on pushes and pull requests. Check the [Actions page](https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge/actions) for the result for each commit.
+Use the contents of **this directory as the GitHub repository root**, including dotfiles. Do not upload the parent challenge workspace. `.github/workflows/ci.yml` installs from the lockfile, checks types, runs tests and coverage, builds, and audits dependencies. The workflow runs on pushes and pull requests. Check the [Actions page](https://github.com/Jaferdecodesai/DuIgnyteMVP_Aqionlabs/actions) for the result for each commit.
 
 Follow [the Cloudflare runbook](docs/CLOUDFLARE.md) for the verified Workers deployment, assets, native SQLite persistence, secrets and rollback. The earlier [Node/MySQL runbook](docs/HOSTINGER.md) is an optional alternative; it is not the deployed architecture.
 
@@ -58,7 +69,7 @@ The refined 14-slide pitch is in [pitch/](pitch/): editable PPTX, searchable PDF
 
 ## Evidence and technical notes
 
-- [Validation report](evidence/VALIDATION.md): actual test/build/audit and browser results, including remaining checks.
+- [Current release checks](evidence/RENAMED_RELEASE.md), with the [historical Node validation](evidence/VALIDATION.md) retained separately.
 - [TDD record](evidence/TDD.md), [engine TDD record](evidence/TDD_ENGINE.md).
 - [API contract](docs/WEB_API.md), [architecture/security review](docs/ARCHITECTURE_REVIEW.md).
 - Design: calm teal/off-white palette, responsive grid, bottom phone navigation, safe-area spacing, native confirmation dialogs, visible focus, reduced-motion support and a table alternative for charts. System fonts and local SVG assets require no third-party requests.

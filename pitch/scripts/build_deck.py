@@ -19,7 +19,7 @@ def slide(kicker,title,dark=False,notes='',refs='',foot=''):
     slides.append(s)
     rect(s,0,0,W,H,'navy' if dark else 'paper')
     text(s,kicker.upper(),80,57,1200,36,20,'mint' if dark else 'teal',bold=True)
-    text(s,'AqionLabs',1350,52,170,38,26,'white' if dark else 'navy',bold=True,align='right')
+    text(s,'aqionlabs.ai',1280,52,240,38,26,'white' if dark else 'navy',bold=True,align='right')
     if title: text(s,title,80,127,1440,150,61,'white' if dark else 'navy',font='display',leading=1.07)
     line(s,80,829,1520,829,'soft' if dark else 'line',1)
     text(s,f'{len(slides):02}',755,849,90,28,17,'soft' if dark else 'muted',align='center')
@@ -33,8 +33,8 @@ def line(s,x,y,x2,y2,color='line',width=2):
     s['elements'].append(dict(kind='line',x=x,y=y,x2=x2,y2=y2,color=C.get(color,color),width=width))
 def circle(s,x,y,r,fill):
     s['elements'].append(dict(kind='circle',x=x,y=y,r=r,fill=C.get(fill,fill)))
-def image(s,file,x,y,w,h):
-    s['elements'].append(dict(kind='image',file=file,x=x,y=y,w=w,h=h))
+def image(s,file,x,y,w,h,url=None):
+    s['elements'].append(dict(kind='image',file=file,x=x,y=y,w=w,h=h,url=url))
 def text(s,value,x,y,w,h,size=27,color='ink',bold=False,font=None,leading=1.24,align='left',url=None):
     font=font or ('bold' if bold else 'regular')
     wrapped=[]
@@ -68,11 +68,10 @@ s=slide('du × Ignyte challenge  ·  ResilienceTech','',True,notes='Aqion Relay 
 text(s,'Aqion Relay',80,157,1000,95,76,'mint',font='display')
 text(s,'Recover supply.\nProtect operating cash.',80,285,1040,210,78,'white',font='display',leading=1.08)
 text(s,'A practical recovery copilot for UAE SME distributors.',84,538,1000,64,32,'soft')
-text(s,'LIVE MVP',84,642,160,30,18,'mint',bold=True)
-mvp=CFG.get('mvp') or 'DEPLOYMENT URL — INTERNAL PLACEHOLDER'
-text(s,mvp,84,681,1390,42,27,'white',url=CFG.get('mvp'))
-text(s,'GITHUB SOURCE',84,739,190,30,18,'mint',bold=True)
-text(s,CFG['github'],300,734,1210,42,24,'white',url=CFG['github'])
+mvp=CFG['mvp']
+for y,label,url in [(651,'LIVE MVP',mvp),(719,'GITHUB SOURCE',CFG['github'])]:
+    text(s,label,84,y,205,42,24,'mint',bold=True)
+    text(s,url,310,y,1210,42,24,'white',url=url)
 for i,(yy,fill) in enumerate([(160,'teal'),(260,'mint'),(360,'teal')]):
     rect(s,1362,yy,140,56,fill,None,14)
     if i<2:line(s,1432,yy+56,1432,yy+100,'soft',3)
@@ -118,10 +117,13 @@ card(s,1060,330,460,392,'03  /  HUMAN AUTHORITY','Explain, review\nand confirm',
 # 07 — implementation evidence without brittle test-count claims
 s=slide('Working MVP','A mobile workbench,\nwith a complete decision trail.',notes='The implemented web MVP offers Overview, Evidence, Connections and Pilot views. It supports scenario controls, stock/cash charts, a 30-day data table, owner review, saved unsent drafts, cancellation, synthetic JSON import/export and per-SME reset. Anonymous browser sessions isolate demonstration workspaces. This is not enterprise identity. The running Cloudflare app is verified separately through the live cover link. Mobile and automated validation evidence is retained with the repository; exact test counts belong to current CI, not an evergreen claim on this slide.',refs='S08')
 rect(s,80,327,530,406,'navy',None,20)
-image(s,'assets/live-mvp.png',90,343,510,354)
-text(s,'Live Cloudflare MVP · synthetic scenario',105,748,600,30,18,'muted')
+image(s,'assets/live-mvp.png',90,343,510,354,url=mvp)
+text(s,'Open the live MVP · synthetic scenario',105,706,490,26,17,'mint',url=mvp)
 for y,num,head,body in [(330,'01','Compare clearly','Stock and cash curves, daily data and feasible options.'),(471,'02','Review deliberately','Confirmation, stale-source blocks and duplicate protection.'),(612,'03','Keep the evidence','Persisted drafts, readable audit history and portable JSON.')]:
     text(s,num,695,y,80,50,33,'teal',font='display');text(s,head,800,y,700,48,32,'navy',bold=True);text(s,body,800,y+59,700,75,25,'muted')
+for y,label,url in [(751,'LIVE MVP',mvp),(787,'GITHUB',CFG['github'])]:
+    text(s,label,80,y,155,29,18,'teal',bold=True)
+    text(s,url,250,y,1270,29,20,'navy',url=url)
 
 # 08 — Cloudflare current architecture
 s=slide('Cloudflare MVP architecture','One deployment.\nPersistent, isolated demo workspaces.',notes='The production deployment uses a static-export Next.js/React frontend served as Cloudflare Worker assets. The API, numerical engine and domain services run inside a native SQLite-backed Durable Object, using transactionSync for atomic draft, audit and version checks. Signed anonymous sessions, same-origin/CSRF controls and bounded inputs guard the public synthetic workflow. A workspace transaction preserves approval and audit integrity. This is not enterprise tenant IAM; the production-pilot roadmap adds authenticated roles, approved processing/data location, connector credentials and operational restore acceptance. No local filesystem database or Hostinger/MySQL service is required for the Cloudflare release.',refs='S06 · S07 · S08',foot='Live scope: synthetic data and unsent drafts. Enterprise identity, ERP credentials and live writes enter through pilot gates.')
@@ -129,6 +131,8 @@ for x,w,label,head,body in [(80,400,'MOBILE WEB','Next / React UI','Responsive w
     rect(s,x,345,w,270,'white',None,16);text(s,label,x+27,375,w-54,35,18,'teal',bold=True);text(s,head,x+27,438,w-54,67,34,'navy',font='display');text(s,body,x+27,525,w-54,76,24,'muted')
 line(s,480,475,585,475,'teal',4);line(s,1000,475,1105,475,'teal',4)
 for i,value in enumerate(['Signed session + CSRF','Bounded input + safe errors','Version-bound approval','Human confirmation']):pill(s,value,80+i*368,679,335)
+text(s,'SYSTEM DESIGN',80,740,205,30,18,'teal',bold=True)
+text(s,CFG['architecture'],300,740,1220,30,18,'navy',url=CFG['architecture'])
 
 # 09 — technology integration roadmap
 s=slide('Technology integration roadmap','Read first. Reconcile every write.\nThen expand through du.',notes='Proposed eight-week integration preparation, with responsibilities and acceptance gates. Weeks 1–2: AqionLabs maps consented snapshots, SME owners verify terms and the du sponsor approves scope; gate is required-field coverage and approved processing/security design. Weeks 3–4: AqionLabs builds a scoped read-only Zoho adapter using organization and region context; reconcile normalized snapshot against source totals and handle event IDs/revisions. Weeks 5–6: add owner-authorized ERP drafts with idempotency/outbox and reconciliation, sandbox-tested; ambiguous writes remain pending reconciliation. Weeks 7–8: configure sponsor-agreed du identity/billing/distribution interfaces and operational monitoring; no du interface is claimed connected. Each period starts when its dependencies are approved. Pilot comparison begins only after acceptance. Odoo is a subsequent adapter subject to exact version/plan, not a prerequisite for the first pilot.',refs='S05 · S09')
@@ -169,11 +173,14 @@ for i,(risk,control,gate) in enumerate(rows):
 text(s,'Accountable operations: monitor exceptions · pause writes on a material breach · reconcile before resuming',80,768,1440,48,23,'navy',bold=True)
 
 # 14 — decisive ask, no outdated eligibility/deadline prose
-s=slide('The ask','Launch the du recovery pilot.',True,notes='We seek a du sponsor, recruitment of 160 consenting eligible SMEs with at least 150 enrolled before intervention, technical owners for approved read-only and draft interfaces, and a joint evaluation lead. AqionLabs delivers the working MVP, phased connector engineering, onboarding and pilot evidence. Before pilot week 1, agree success thresholds, processing/security controls, support ownership and the cost ceiling. This is a concrete pilot proposal, not a claim of customers, commercial acceptance, production certification or submitted application. Close by opening the live MVP and showing the default scenario, then the explicit unsent draft review.',refs='S01 · S09',foot='Aqion Relay  /  Recover supply. Protect operating cash.')
+s=slide('The ask','Launch the du recovery pilot.',True,notes='We seek a du sponsor, recruitment of 160 consenting eligible SMEs with at least 150 enrolled before intervention, technical owners for approved read-only and draft interfaces, and a joint evaluation lead. AqionLabs delivers the working MVP, phased connector engineering, onboarding and pilot evidence. Before pilot week 1, agree success thresholds, processing/security controls, support ownership and the cost ceiling. This is a concrete pilot proposal, not a claim of customers, commercial acceptance, production certification or submitted application. Close by opening the live MVP and showing the default scenario, then the explicit unsent draft review.',refs='S01 · S09')
 text(s,'A working product.\nA measurable pilot.\nA clear path to SME scale.',80,318,820,225,61,'white',font='display',leading=1.15)
 for i,(head,body) in enumerate([('Sponsor + recruit','160 consenting SMEs; minimum 150 enrolled.'),('Connect + operate','Named du technical owners and approved interfaces.'),('Evaluate + expand','Joint scorecard, delivery gates and cost ceiling.')]):
     y=330+i*139;text(s,f'0{i+1}',1035,y,68,48,30,'mint',font='display');text(s,head,1130,y,370,45,30,'white',bold=True);text(s,body,1130,y+55,370,77,24,'soft')
 pill(s,'NEXT MILESTONE  /  Pilot charter + named owners',80,673,768,True)
+for y,label,url in [(751,'LIVE MVP',mvp),(787,'GITHUB',CFG['github'])]:
+    text(s,label,80,y,155,29,18,'mint',bold=True)
+    text(s,url,250,y,1270,29,20,'white',url=url)
 
 scene={'width':W,'height':H,'config':CFG,'slides':slides}
 (ROOT/'scene.json').write_text(json.dumps(scene,ensure_ascii=False,indent=2))
@@ -203,6 +210,7 @@ for s in slides:
             if e.get('url'):pdf.linkURL(e['url'],(e['x'],H-e['y']-e['h'],e['x']+e['w'],H-e['y']),relative=1,thickness=0)
         elif e['kind']=='image':
             pdf.drawImage(ImageReader(str(ROOT/e['file'])),e['x'],H-e['y']-e['h'],e['w'],e['h'],preserveAspectRatio=True,anchor='c',mask='auto')
+            if e.get('url'):pdf.linkURL(e['url'],(e['x'],H-e['y']-e['h'],e['x']+e['w'],H-e['y']),relative=1,thickness=0)
     pdf.restoreState();pdf.showPage()
 pdf.save()
 print(json.dumps({'slides':len(slides),'textObjects':sum(e['kind']=='text' for s in slides for e in s['elements']),'urlFinalized':bool(CFG.get('mvp')),'pdf':str(ROOT/'Aqion-Relay-Du-Ignyte-Pitch.pdf')}))

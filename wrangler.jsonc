@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "aqionrelaydumvp",
+  "name": "duignytemvp",
   "main": "src/cloudflare/worker.ts",
   "compatibility_date": "2026-10-16",
   "compatibility_flags": ["nodejs_compat"],
@@ -17,7 +17,7 @@
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RelayWorkspace"] }],
   "vars": {
-    "APP_ORIGIN": "https://aqionrelaydumvp.jafermn.workers.dev",
+    "APP_ORIGIN": "https://duignytemvp.aqionlabs.workers.dev",
     "RELAY_WRITES_ENABLED": "true",
     "DEMO_ACCESS_CODE": ""
   },

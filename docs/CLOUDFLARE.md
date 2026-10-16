@@ -1,6 +1,6 @@
 # Cloudflare Workers release
 
-Verified public URL: **https://aqionrelaydumvp.jafermn.workers.dev**. Worker name: `aqionrelaydumvp`. The requested leading words use lowercase because DNS hostnames are case-insensitive.
+Verified public URL: **https://duignytemvp.aqionlabs.workers.dev**. Worker name: `duignytemvp`. The requested leading words use lowercase because DNS hostnames are case-insensitive.
 
 ## Architecture
 
@@ -11,8 +11,8 @@ Node 24 builds a genuine Next.js static export in an isolated `.cloudflare-build
 ## Reproduce and deploy from GitHub source
 
 ```sh
-git clone https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge.git
-cd Relay_IgnyteDuChallenge
+git clone https://github.com/Jaferdecodesai/DuIgnyteMVP_Aqionlabs.git
+cd DuIgnyteMVP_Aqionlabs
 npm ci
 npm run check
 npx wrangler login
@@ -28,7 +28,7 @@ For local native-runtime preview, create an ignored `.dev.vars` with `SESSION_SE
 ## Verify
 
 ```sh
-node scripts/smoke-cloudflare.mjs https://aqionrelaydumvp.jafermn.workers.dev
+node scripts/smoke-cloudflare.mjs https://duignytemvp.aqionlabs.workers.dev
 ```
 
 The smoke script exercises real HTTP and native storage, including session isolation, origins/CSRF, the default 130-combination calculation, duplicate approvals, imports, cancellation, reset and export. It leaves one fictional draft in a separate test workspace and stores its credentials only in ignored `.data/`. Reports omit authentication material. Repeat with care: 200 workspaces and per-minute mutation limits intentionally bound the public demo.

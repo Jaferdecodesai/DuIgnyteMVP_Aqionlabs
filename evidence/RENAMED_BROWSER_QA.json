@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-16T14:54:41.799Z",
+  "url": "https://duignytemvp.aqionlabs.workers.dev/pitch/",
+  "responsive": [
+    {
+      "clippedText": [],
+      "height": 1000,
+      "overflow": false,
+      "slides": 14,
+      "width": 1440
+    },
+    {
+      "clippedText": [],
+      "height": 720,
+      "overflow": false,
+      "slides": 14,
+      "width": 1280
+    },
+    {
+      "clippedText": [],
+      "height": 844,
+      "overflow": false,
+      "slides": 14,
+      "width": 390
+    },
+    {
+      "clippedText": [],
+      "height": 390,
+      "overflow": false,
+      "slides": 14,
+      "width": 844
+    },
+    {
+      "clippedText": [],
+      "height": 740,
+      "overflow": false,
+      "slides": 14,
+      "width": 320
+    }
+  ],
+  "dashboard_image_clicked_and_live_app_opened": true,
+  "browser_errors": []
+}

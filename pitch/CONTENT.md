@@ -2,7 +2,7 @@
 
 ## 01 — Aqion Relay
 
-AqionLabs
+aqionlabs.ai
 
 Aqion Relay
 
@@ -11,9 +11,13 @@ Protect operating cash.
 
 A practical recovery copilot for UAE SME distributors.
 
-https://aqionrelaydumvp.jafermn.workers.dev
+LIVE MVP
 
-https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge
+https://duignytemvp.aqionlabs.workers.dev
+
+GITHUB SOURCE
+
+https://github.com/Jaferdecodesai/DuIgnyteMVP_Aqionlabs
 
 **Speaker notes**
 
@@ -23,7 +27,7 @@ Sources: S01 · S08
 
 ## 02 — A shipment slips. Two commitments collide.
 
-AqionLabs
+aqionlabs.ai
 
 A shipment slips.
 Two commitments collide.
@@ -50,7 +54,7 @@ Sources: Product proposition / proposed operating plan
 
 ## 03 — One focused decision. A strong fit with existing SME tools.
 
-AqionLabs
+aqionlabs.ai
 
 One focused decision.
 A strong fit with existing SME tools.
@@ -82,7 +86,7 @@ Sources: S01 · S04 · S05
 
 ## 04 — From disruption to an auditable draft.
 
-AqionLabs
+aqionlabs.ai
 
 From disruption to an auditable draft.
 
@@ -133,7 +137,7 @@ Sources: S08
 
 ## 05 — A recovery choice you can inspect.
 
-AqionLabs
+aqionlabs.ai
 
 A recovery choice you can inspect.
 
@@ -163,7 +167,7 @@ Sources: S08
 
 ## 06 — Forecast numerically. Decide within hard constraints.
 
-AqionLabs
+aqionlabs.ai
 
 Forecast numerically.
 Decide within hard constraints.
@@ -198,7 +202,7 @@ Sources: S08
 
 ## 07 — A mobile workbench, with a complete decision trail.
 
-AqionLabs
+aqionlabs.ai
 
 A mobile workbench,
 with a complete decision trail.
@@ -229,7 +233,7 @@ Sources: S08
 
 ## 08 — One deployment. Persistent, isolated demo workspaces.
 
-AqionLabs
+aqionlabs.ai
 
 One deployment.
 Persistent, isolated demo workspaces.
@@ -257,7 +261,7 @@ Sources: S06 · S07 · S08
 
 ## 09 — Read first. Reconcile every write. Then expand through du.
 
-AqionLabs
+aqionlabs.ai
 
 Read first. Reconcile every write.
 Then expand through du.
@@ -296,7 +300,7 @@ Sources: S05 · S09
 
 ## 10 — 160 SMEs. Four waves. A credible comparison.
 
-AqionLabs
+aqionlabs.ai
 
 160 SMEs. Four waves.
 A credible comparison.
@@ -325,7 +329,7 @@ Sources: S01 · S09
 
 ## 11 — Measure better decisions. Keep operational guardrails absolute.
 
-AqionLabs
+aqionlabs.ai
 
 Measure better decisions.
 Keep operational guardrails absolute.
@@ -364,7 +368,7 @@ Sources: S09
 
 ## 12 — A narrow wedge. A repeatable route through du.
 
-AqionLabs
+aqionlabs.ai
 
 A narrow wedge.
 A repeatable route through du.
@@ -402,7 +406,7 @@ Sources: S02 · S03
 
 ## 13 — Make the safe action the easiest action.
 
-AqionLabs
+aqionlabs.ai
 
 Make the safe action
 the easiest action.
@@ -444,7 +448,7 @@ Sources: S06 · S08 · S09
 
 ## 14 — Launch the du recovery pilot.
 
-AqionLabs
+aqionlabs.ai
 
 Launch the du recovery pilot.
 

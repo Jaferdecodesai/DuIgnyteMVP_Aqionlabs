@@ -1,6 +1,6 @@
 {
-  "base": "https://aqionrelaydumvp.jafermn.workers.dev",
-  "checked_at": "2026-10-16T12:58:38.925Z",
+  "base": "https://duignytemvp.aqionlabs.workers.dev",
+  "checked_at": "2026-10-16T14:51:56.252Z",
   "passed": 11,
   "checks": [
     "native SQLite readiness and security headers",

@@ -1,6 +1,6 @@
 # Aqion Relay Node web MVP
 
-Original build plan, 16 October 2026. The owner subsequently requested public GitHub publication as Relay_IgnyteDuChallenge; statements below about the original preparation-only scope are historical.
+Original build plan, 16 October 2026. The owner subsequently requested public GitHub publication as DuIgnyteMVP_Aqionlabs; statements below about the original preparation-only scope are historical.
 
 Scope: turn the existing local synthetic ResilienceTech workflow into a standalone mobile-friendly Node.js application that can be imported from GitHub into Hostinger. No external publication, repository push or hosting changes are required to prepare this deliverable.
 

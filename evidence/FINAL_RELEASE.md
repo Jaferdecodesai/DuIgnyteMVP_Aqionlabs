@@ -1,5 +1,7 @@
 # Final Cloudflare and pitch release — 16 October 2026
 
+> Historical release at the earlier hostname. The current renamed deployment and revised artifacts are documented in [RENAMED_RELEASE.md](RENAMED_RELEASE.md).
+
 Live app: https://aqionrelaydumvp.jafermn.workers.dev
 
 Public source: https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge

@@ -2,6 +2,8 @@
 
 The final 14-slide presentation is supplied as native editable **PPTX**, searchable **PDF**, and an offline **HTML** presentation with local editing, save and export controls. Slide 1 contains both the public repository and the verified live Cloudflare MVP links. The actual app screenshot on slide 7 is captured from that deployment with fictional data.
 
+The current deck uses **aqionlabs.ai** branding, aligned cover link rows, compact links on slides 7 and 14, a clickable dashboard image, and a system-design document link on slide 8. Identical final formats are also at the repository root for quick access through the README.
+
 `CONTENT.md` contains slide text and speaker notes. `SOURCES.md` records direct source links and evidence boundaries. `build-config.json` contains the two cover URLs. `scripts/build_deck.py` owns content and geometry; it emits `scene.json` and the PDF. `scripts/export_deck.mjs` consumes that scene to emit the editable PowerPoint and self-contained HTML. The PowerPoint retains native text and shapes; the actual app screenshot remains an image. Font files retain their included SIL Open Font Licenses.
 
 To rebuild with Python 3 and Node 24:

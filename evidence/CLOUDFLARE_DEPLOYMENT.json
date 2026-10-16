@@ -1,24 +1,34 @@
 {
-  "checked_at": "2026-10-16T12:58:34.680Z",
-  "worker_version": "f3617797-bdc3-48d8-b636-5a4d2ad75d95",
+  "checked_at": "2026-10-16T14:55:14.878Z",
+  "worker_version": "bae23854-d748-4660-bc91-7f6f12e8a2b4",
+  "canonical_url": "https://duignytemvp.aqionlabs.workers.dev",
   "persisted_across_redeploy": true,
-  "drafts": 1,
   "approval_audit_entries": 1,
   "published_assets": [
     {
-      "url": "https://aqionrelaydumvp.jafermn.workers.dev/pitch/",
-      "bytes": 542618,
-      "sha256": "040d8492f08d7bd6963a4fcb8fa7345ff12735e87f237a5208c3b26b51a4a1a9"
+      "url": "https://duignytemvp.aqionlabs.workers.dev/pitch/",
+      "bytes": 545572,
+      "sha256": "10b5a6919a9d90313fcb84bad2dc4116e00e9f266b65ed3ebb285d967cbb3e97"
     },
     {
-      "url": "https://aqionrelaydumvp.jafermn.workers.dev/pitch/Aqion-Relay-Du-Ignyte-Pitch.pdf",
-      "bytes": 180703,
-      "sha256": "0227505be39cf8852df559f8c9b03a86f0aad06622e91a96f8a3cc75da21361d"
+      "url": "https://duignytemvp.aqionlabs.workers.dev/pitch/Aqion-Relay-Du-Ignyte-Pitch.pdf",
+      "bytes": 182637,
+      "sha256": "618c040a5e93b2bf7a49544bc4aa2c6c0705c3278fbe6326b368257670893afa"
     },
     {
-      "url": "https://aqionrelaydumvp.jafermn.workers.dev/pitch/Aqion-Relay-Du-Ignyte-Pitch.pptx",
-      "bytes": 539792,
-      "sha256": "f17d8056b7db8698ca44755fa4607a23e86a1530bc281d6471c8afcb252781ae"
+      "url": "https://duignytemvp.aqionlabs.workers.dev/pitch/Aqion-Relay-Du-Ignyte-Pitch.pptx",
+      "bytes": 551839,
+      "sha256": "22e5f57d0ccb692113359182eb313c0904773e399032152b7e4bf25dcc4e4136"
+    },
+    {
+      "url": "https://duignytemvp.aqionlabs.workers.dev/architecture/Aqion-Relay-System-Design.docx",
+      "bytes": 109505,
+      "sha256": "142544ca458778af2502ddecad9c5dfb857973e3c16fc5a6310dd9127a628219"
+    },
+    {
+      "url": "https://duignytemvp.aqionlabs.workers.dev/architecture/Aqion-Relay-System-Design.pdf",
+      "bytes": 216672,
+      "sha256": "c140054fe6d3606d9028bcee7190087456079083ee6ca1fa4aebc7c316a60921"
     }
   ]
 }

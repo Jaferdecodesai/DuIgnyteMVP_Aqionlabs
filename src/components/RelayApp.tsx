@@ -1479,7 +1479,7 @@ export default function RelayApp() {
               Your decision. Your approval.
             </span>
             <span>Aqion Relay · Synthetic ResilienceTech MVP</span>
-            <span><a href="/pitch/" target="_blank" rel="noopener noreferrer">Pitch deck</a> · <a href="https://github.com/Jaferdecodesai/Relay_IgnyteDuChallenge" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+            <span><a href="/pitch/" target="_blank" rel="noopener noreferrer">Pitch deck</a> · <a href="https://github.com/Jaferdecodesai/DuIgnyteMVP_Aqionlabs" target="_blank" rel="noopener noreferrer">GitHub</a></span>
           </footer>
         </main>
       </div>
