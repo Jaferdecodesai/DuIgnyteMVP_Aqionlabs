@@ -1,0 +1,16 @@
+:root {
+  --ink: #172e35;
+  --muted: #586e75;
+  --teal: #087f72;
+  --teal-dark: #066357;
+  --teal-soft: #e8f5f0;
+  --canvas: #f5f8f7;
+  --surface: #fff;
+  --border: #dce6e2;
+  --amber: #97600b;
+  --amber-soft: #fff7e6;
+  --red: #a83232;
+  --chart-baseline: #83909a;
+  --shadow: 0 3px 14px #173c2b04;
+  --radius: 16px;
+}

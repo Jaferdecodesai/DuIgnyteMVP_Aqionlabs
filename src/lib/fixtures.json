@@ -1,0 +1,266 @@
+{
+  "packaging": {
+    "id": "SYN-packaging-001",
+    "tenant": "packaging",
+    "name": "Coastline Packaging",
+    "sector": "Packaging distributor",
+    "as_of": "2026-10-15",
+    "age_hours": 2.0,
+    "sku": "PKG-100 \u00b7 Food containers",
+    "unit": "units",
+    "stock": 180,
+    "cash": 52000.0,
+    "cash_floor": 24000.0,
+    "history": [
+      38, 42, 39, 35, 36, 27, 24, 35, 38, 38, 39, 30, 27, 25, 36, 40, 34, 37,
+      37, 26, 26, 35, 39, 38, 35, 37, 28, 27, 37, 38, 40, 34, 32, 28, 26, 37,
+      42, 41, 39, 34, 33, 29, 37, 38, 43, 37, 35, 31, 28, 36, 41, 40, 35, 34,
+      31, 28, 42, 40, 40, 40, 34, 30, 25, 33, 41, 39, 37, 36, 31, 29, 37, 42,
+      41, 37, 37, 30, 31, 39, 43, 42, 39, 36, 36, 29
+    ],
+    "synthetic": true,
+    "inbound": {
+      "day": 6,
+      "qty": 850,
+      "prepaid": true
+    },
+    "receipts": [
+      {
+        "day": 9,
+        "amount": 15000.0,
+        "label": "Existing receivable A"
+      },
+      {
+        "day": 22,
+        "amount": 18000.0,
+        "label": "Existing receivable B"
+      }
+    ],
+    "obligations": [
+      {
+        "day": 7,
+        "amount": 16000.0,
+        "label": "Payroll"
+      },
+      {
+        "day": 15,
+        "amount": 8000.0,
+        "label": "Rent and operations"
+      }
+    ],
+    "suppliers": [
+      {
+        "id": "local-fast",
+        "name": "Falcon Supply \u00b7 fictional",
+        "approved": true,
+        "qty_cap": 260,
+        "moq": 100,
+        "pack": 20,
+        "lead": 2,
+        "price": 23.0,
+        "freight": 250.0,
+        "valid_until": "2026-10-18"
+      },
+      {
+        "id": "local-bulk",
+        "name": "Oasis Wholesale \u00b7 fictional",
+        "approved": true,
+        "qty_cap": 700,
+        "moq": 150,
+        "pack": 50,
+        "lead": 4,
+        "price": 18.0,
+        "freight": 550.0,
+        "valid_until": "2026-10-18"
+      },
+      {
+        "id": "unapproved",
+        "name": "Harbour Stock \u00b7 fictional",
+        "approved": false,
+        "qty_cap": 1400,
+        "moq": 100,
+        "pack": 100,
+        "lead": 1,
+        "price": 14.0,
+        "freight": 300.0,
+        "valid_until": "2026-10-18"
+      }
+    ]
+  },
+  "trading": {
+    "id": "SYN-trading-001",
+    "tenant": "trading",
+    "name": "Cedar General Trading",
+    "sector": "General trading",
+    "as_of": "2026-10-15",
+    "age_hours": 2.0,
+    "sku": "TRD-200 \u00b7 Cleaning supplies",
+    "unit": "units",
+    "stock": 200,
+    "cash": 56000.0,
+    "cash_floor": 24000.0,
+    "history": [
+      37, 42, 39, 37, 37, 29, 28, 38, 44, 39, 39, 32, 30, 27, 40, 39, 40, 35,
+      36, 28, 33, 39, 39, 40, 39, 36, 34, 32, 35, 41, 42, 41, 36, 33, 29, 37,
+      44, 40, 37, 41, 30, 26, 41, 44, 41, 40, 33, 31, 29, 41, 43, 41, 43, 38,
+      38, 33, 41, 44, 41, 39, 37, 33, 30, 40, 47, 38, 40, 38, 32, 31, 40, 44,
+      46, 44, 36, 37, 35, 45, 45, 42, 43, 39, 30, 32
+    ],
+    "synthetic": true,
+    "inbound": {
+      "day": 6,
+      "qty": 850,
+      "prepaid": true
+    },
+    "receipts": [
+      {
+        "day": 9,
+        "amount": 15000.0,
+        "label": "Existing receivable A"
+      },
+      {
+        "day": 22,
+        "amount": 18000.0,
+        "label": "Existing receivable B"
+      }
+    ],
+    "obligations": [
+      {
+        "day": 7,
+        "amount": 16000.0,
+        "label": "Payroll"
+      },
+      {
+        "day": 15,
+        "amount": 8000.0,
+        "label": "Rent and operations"
+      }
+    ],
+    "suppliers": [
+      {
+        "id": "local-fast",
+        "name": "Falcon Supply \u00b7 fictional",
+        "approved": true,
+        "qty_cap": 260,
+        "moq": 100,
+        "pack": 20,
+        "lead": 2,
+        "price": 23.0,
+        "freight": 250.0,
+        "valid_until": "2026-10-18"
+      },
+      {
+        "id": "local-bulk",
+        "name": "Oasis Wholesale \u00b7 fictional",
+        "approved": true,
+        "qty_cap": 700,
+        "moq": 150,
+        "pack": 50,
+        "lead": 4,
+        "price": 18.0,
+        "freight": 550.0,
+        "valid_until": "2026-10-18"
+      },
+      {
+        "id": "unapproved",
+        "name": "Harbour Stock \u00b7 fictional",
+        "approved": false,
+        "qty_cap": 1400,
+        "moq": 100,
+        "pack": 100,
+        "lead": 1,
+        "price": 14.0,
+        "freight": 300.0,
+        "valid_until": "2026-10-18"
+      }
+    ]
+  },
+  "homeware": {
+    "id": "SYN-homeware-001",
+    "tenant": "homeware",
+    "name": "Harbour Homeware",
+    "sector": "Homeware distributor",
+    "as_of": "2026-10-15",
+    "age_hours": 2.0,
+    "sku": "HOM-300 \u00b7 Storage boxes",
+    "unit": "units",
+    "stock": 220,
+    "cash": 60000.0,
+    "cash_floor": 24000.0,
+    "history": [
+      39, 47, 50, 44, 39, 34, 32, 43, 47, 45, 38, 43, 30, 31, 40, 48, 40, 45,
+      37, 37, 33, 47, 44, 42, 47, 38, 36, 33, 42, 46, 44, 43, 38, 32, 31, 39,
+      42, 44, 46, 43, 34, 31, 45, 46, 44, 44, 39, 32, 31, 43, 46, 46, 46, 42,
+      35, 34, 46, 50, 44, 42, 39, 35, 33, 44, 45, 44, 44, 47, 35, 35, 43, 45,
+      47, 44, 41, 37, 33, 47, 45, 48, 42, 44, 41, 36
+    ],
+    "synthetic": true,
+    "inbound": {
+      "day": 6,
+      "qty": 850,
+      "prepaid": true
+    },
+    "receipts": [
+      {
+        "day": 9,
+        "amount": 15000.0,
+        "label": "Existing receivable A"
+      },
+      {
+        "day": 22,
+        "amount": 18000.0,
+        "label": "Existing receivable B"
+      }
+    ],
+    "obligations": [
+      {
+        "day": 7,
+        "amount": 16000.0,
+        "label": "Payroll"
+      },
+      {
+        "day": 15,
+        "amount": 8000.0,
+        "label": "Rent and operations"
+      }
+    ],
+    "suppliers": [
+      {
+        "id": "local-fast",
+        "name": "Falcon Supply \u00b7 fictional",
+        "approved": true,
+        "qty_cap": 260,
+        "moq": 100,
+        "pack": 20,
+        "lead": 2,
+        "price": 23.0,
+        "freight": 250.0,
+        "valid_until": "2026-10-18"
+      },
+      {
+        "id": "local-bulk",
+        "name": "Oasis Wholesale \u00b7 fictional",
+        "approved": true,
+        "qty_cap": 700,
+        "moq": 150,
+        "pack": 50,
+        "lead": 4,
+        "price": 18.0,
+        "freight": 550.0,
+        "valid_until": "2026-10-18"
+      },
+      {
+        "id": "unapproved",
+        "name": "Harbour Stock \u00b7 fictional",
+        "approved": false,
+        "qty_cap": 1400,
+        "moq": 100,
+        "pack": 100,
+        "lead": 1,
+        "price": 14.0,
+        "freight": 300.0,
+        "valid_until": "2026-10-18"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-16",
+  "runtime": "Node 24.19.0; optimized Next production build; loopback SQLite",
+  "checks": [
+    {
+      "check": "Readiness uses SQLite in explicit loopback production preview",
+      "result": "pass"
+    },
+    {
+      "check": "Production page security headers present",
+      "result": "pass"
+    },
+    {
+      "check": "Fresh browser workspaces start empty",
+      "result": "pass"
+    },
+    {
+      "check": "Missing CSRF rejected",
+      "result": "pass"
+    },
+    {
+      "check": "Cross-origin mutation rejected",
+      "result": "pass"
+    },
+    {
+      "check": "Compiled production route reproduces reference calculation",
+      "result": "pass"
+    },
+    {
+      "check": "Other workspace proposal cannot be approved",
+      "result": "pass"
+    },
+    {
+      "check": "Confirmation creates one unsent synthetic draft",
+      "result": "pass"
+    },
+    {
+      "check": "Duplicate approval is idempotent",
+      "result": "pass"
+    },
+    {
+      "check": "Evidence export is uncached and has no session secrets",
+      "result": "pass"
+    },
+    {
+      "check": "Other workspace export stays empty",
+      "result": "pass"
+    },
+    {
+      "check": "Non-synthetic import rejected",
+      "result": "pass"
+    },
+    {
+      "check": "Local draft cancellation succeeds",
+      "result": "pass"
+    },
+    {
+      "check": "Confirmed reset clears selected fictional SME",
+      "result": "pass"
+    }
+  ],
+  "reference_http_calculation_ms": 10.02,
+  "live_mysql_verified": false,
+  "hostinger_deployed": false
+}
